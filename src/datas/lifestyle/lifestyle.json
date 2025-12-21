@@ -1,0 +1,16 @@
+{
+  "lifeStyleProducts": [
+    {
+      "id": "001",
+      "price": 21.11,
+      "title": "Short",
+      "colors": [
+        { "name": "red", "class": "bg-red-500" },
+        { "name": "blue", "class": "bg-blue-500" }
+      ],
+      "brand": "ZANDO",
+      "displayImg": "assets/logo/product-1.png",
+      "fadeImg": "assets/logo/product-1-hover.png"
+    }
+  ]
+}
