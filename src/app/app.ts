@@ -9,6 +9,4 @@ import { Home } from '../components/home/home';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('shop-app');
-}
+export class App {}

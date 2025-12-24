@@ -1,9 +1,51 @@
 <nav
-  class="flex items-center justify-between px-8 py-2 bg-white border-b border-gray-100 font-sans tracking-tight fixed-top"
+  class="flex items-center justify-between px-8 py-2 bg-white border-b border-gray-100 font-sans tracking-tight fixed fixed-top top-0 w-screen z-[1000]"
 >
   <div class="flex items-center gap-8 text-[13px] font-bold text-gray-800">
-    <ul class="text-[1rem] flex">
-      <li class="hover:bg-gray-200 px-5 py-3 transition-colors cursor-pointer">WOMEN</li>
+    <ul class="text-[1rem] flex items-center">
+      <li class="relative group font-sans cursor-pointer">
+        <button
+          class="flex items-center gap-2 cursor-pointer uppercase transition-all duration-300"
+        >
+          Products
+
+          <span
+            class="w-1.5 h-1.5 border-r-2 border-b-2 border-black transform rotate-45 transition-transform duration-300 translate-y-[-2px] group-hover:rotate-[225deg] group-hover:translate-y-[1px]"
+          ></span>
+        </button>
+
+        <div
+          class="absolute left-0 pt-4 w-60 invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-50"
+        >
+          <div class="bg-white border border-gray-100 shadow-xl py-2">
+            <a
+              [routerLink]="['/products', 'kitchen']"
+              class="block px-6 py-3 text-[10px] tracking-widest uppercase text-gray-950 hover:text-black hover:bg-gray-50 transition-colors"
+            >
+              Kitchen
+            </a>
+            <a
+              [routerLink]="['/products', 'fashion']"
+              class="block px-6 py-3 text-[10px] tracking-widest uppercase text-gray-950 hover:text-black hover:bg-gray-50 transition-colors"
+            >
+              FASHION
+            </a>
+            <a
+              [routerLink]="['/products', 'Electronics']"
+              class="block px-6 py-3 text-[10px] tracking-widest uppercase text-gray-950 hover:text-black hover:bg-gray-50 transition-colors"
+            >
+              ELECTRINIC
+            </a>
+            <div class="mx-6 border-t border-gray-50 my-1"></div>
+            <a
+              [routerLink]="['/products', 'all']"
+              class="block px-6 py-3 text-[10px] tracking-widest uppercase text-gray-950 hover:text-black hover:bg-gray-50 transition-colors"
+            >
+              Shop All
+            </a>
+          </div>
+        </div>
+      </li>
       <li class="hover:bg-gray-200 px-5 py-3 transition-colors cursor-pointer">MEN</li>
       <li class="hover:bg-gray-200 px-5 py-3 transition-colors cursor-pointer">BOYS</li>
       <li class="hover:bg-gray-200 px-5 py-3 transition-colors cursor-pointer">GIRLS</li>

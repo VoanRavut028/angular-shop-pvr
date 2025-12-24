@@ -1,15 +1,17 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { ProductVM } from './productVM';
-import { MatButton } from '@angular/material/button';
+
+import { Productcard } from '../productcard/productcard';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-grid',
-  imports: [MatButton],
+  imports: [Productcard, TitleCasePipe],
   templateUrl: './product-grid.html',
   styleUrl: './product-grid.css',
 })
 export default class ProductGrid {
-  category = input<string>();
+  category = input<string>('all');
 
   products = signal<ProductVM[]>([
     {
@@ -133,4 +135,6 @@ export default class ProductGrid {
 
     return allData.filter((p) => p.category.toLowerCase() === currentCategory);
   });
+
+  categories = signal<string[]>(['all', 'fashio', 'kitchen', 'electronic']);
 }
